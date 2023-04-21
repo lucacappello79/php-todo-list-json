@@ -4,7 +4,13 @@ if (isset($_POST['newTask'])) {
     
     $tasksJson = file_get_contents('tasks.json');
     $tasks = json_decode($tasksJson);
-    $tasks[] = $_POST['newTask'];
+    
+    // $tasks[] = $_POST['newTask'];
+    $tasks[] = [
+        "task" => $_POST['newTask'],
+        "completed" => false
+    ];
+
     $newTasksJson = json_encode($tasks);
     file_put_contents('tasks.json', $newTasksJson);
     

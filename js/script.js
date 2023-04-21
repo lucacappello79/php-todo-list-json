@@ -23,9 +23,17 @@ createApp({
 
         addTask() {
 
+            // let data = {
+            //     newTask: this.newTask,
+            // };
+
             let data = {
-                newTask: this.newTask,
+                newTask: {
+                    task: this.newTask,
+                    completed: false
+                }
             };
+
 
             axios.post('./server.php', data, { headers: { 'Content-type': 'multipart/form-data' } }).then(res => {
                 this.getTask();
@@ -34,6 +42,22 @@ createApp({
             this.newTask = "";
 
         },
+
+        saveTasks() {
+
+            axios.post('./server.php', { tasks: this.toDoList }, { headers: { 'Content-type': 'application/json' } })
+                .then(res => {
+                    this.getTask();
+                });
+        },
+
+        toggleCompleted(index) {
+
+            this.toDoList[index].completed = !this.toDoList[index].completed;
+            this.saveTasks();
+
+        },
+
 
         randomColor() {
 

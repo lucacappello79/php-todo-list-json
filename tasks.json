@@ -1,1 +1,43 @@
-["Clean","Wash","Dry","Mop","Dust","Scrub","Iron","Polish","Swipe","Hang clothes","Buy new shoes"]
+// ["Clean","Wash","Dry","Mop","Dust","Scrub","Iron","Polish","Swipe","Hang clothes","Buy new shoes","Walk the dog"]
+[
+    {
+        "task": "Organize",
+        "completed": false
+    },
+    {
+        "task": "Wash",
+        "completed": false
+    },
+    {
+        "task": "Dry",
+        "completed": false
+    },
+    {
+        "task": "Mop",
+        "completed": false
+    },
+    {
+        "task": "Vacuum",
+        "completed": false
+    },
+    {
+        "task": "Fold",
+        "completed": false
+    },
+    {
+        "task": "Swipe",
+        "completed": false
+    },
+    {
+        "task": "Iron",
+        "completed": false
+    },
+    {
+        "task": "Mop",
+        "completed": false
+    },
+    {
+        "task": "Scrub",
+        "completed": false
+    }
+]

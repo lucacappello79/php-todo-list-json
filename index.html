@@ -29,10 +29,18 @@
 
                     <h2 class="text-center mb-4">To-Do List</h2>
 
-                    <ul class="list-group mb-3">
+                    <!-- <ul class="list-group mb-3">
                         <li :class="['list-group-item', 'list-group-item-' + randomColor()]"
                             v-for="(item, index) in toDoList">
                             {{ item }}
+                        </li>
+                    </ul> -->
+
+                    <ul class="list-group mb-3">
+                        <li :class="['list-group-item', 'list-group-item-' + randomColor()]"
+                            v-for="(item, index) in toDoList" @click="toggleCompleted(index)"
+                            :style="{ textDecoration: item.completed ? 'line-through' : 'none' }">
+                            {{ item.task }}
                         </li>
                     </ul>
 
